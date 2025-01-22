@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore endangered animals around the world with an interactive map.">
+  <meta name="author" content="Your Name">
+  <meta name="robots" content="index, follow">
+  <title>The Endangered Trivia</title>
+
+  <!-- External stylesheets -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+  <!-- Google Font (for style) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Internal Styles for the Background and Layout */
+    body {
+      background-image: url('Untitled\ design\ \(2\).png'); /* Replace with your image path */
+     
+      font-family: 'Poppins', sans-serif; /* Use your chosen font */
+      margin: 0;
+      padding: 0;
+      color: white; /* Ensures the text is visible on top of the background */
+    }
+
+
+    .animated-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: darkgreen;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .animated-button:hover {
+      background-color: lightgreen;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <h1>The Endangered Trivia</h1>
+  </header>
+
+  <!-- Description Text -->
+  
+
+  <!-- Map Container -->
+  <div id="map"></div>
+<br>
+  <!-- Animated Button with Text on it -->
+  <a href="table.html" class="animated-button" id="navigateButton"><span>More INFO</span></a>
+  <br><br>
+
+  <!-- External Scripts -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Fallback for Leaflet in case CDN is down -->
+  <script>
+    if (typeof L === 'undefined') {
+      document.write('<script src="path/to/leaflet.js"><\/script>');
+    }
+  </script>
+
+</body>
+
+</html>

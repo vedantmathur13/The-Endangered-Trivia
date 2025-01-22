@@ -1,0 +1,211 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(to top, #e8f5e9, #ffffff);
+    padding: 0;
+}
+
+/* Header Strip (Fixed Header) */
+header {
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0; /* Stick it to the top */
+    left: 0;
+    width: 100%;
+    background-color: #388e3c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Make sure the header is on top of other content */
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    margin-top: 5px;
+}
+
+/* Main Content (Ensure it doesn't get hidden under fixed header) */
+main {
+    margin-top: 120px; /* Add margin to the top so content doesn't hide behind the fixed header */
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+td {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    height: 350px;
+    text-align: center;
+    position: relative;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+}
+
+/* Hover Effects on Table Cells (Color Change) */
+td:hover {
+    background-color: #388e3c; /* Dark Green Background on Hover */
+    color: #ffffff; /* White Text on Hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+td img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Effects on Images */
+td:hover img {
+    opacity: 0.8; /* Slight opacity change on hover */
+}
+
+/* Text Inside Cells */
+td .info {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+td .info strong {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #388e3c; /* Default Green Text */
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+td .info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555; /* Default Dark Gray Text */
+    transition: color 0.3s ease;
+}
+
+/* On Hover: Change Text Color */
+td:hover .info strong {
+    color: #ffffff; /* White Text on Hover */
+}
+
+td:hover .info p {
+    color: #e8f5e9; /* Lighter Green Text on Hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 30px 10px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    td {
+        height: auto; /* Allow content to adjust on smaller screens */
+    }
+
+    td img {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    td {
+        padding: 15px;
+    }
+
+    td img {
+        max-height: 200px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #388e3c;
+    color: white;
+    width: 100%;
+    margin-top: 40px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+ body {
+      background-image: url('Untitled\ design\ \(2\).png'); /* Replace with your image path */
+
+      font-family: 'Poppins', sans-serif; /* Use your chosen font */
+      margin: 0;
+      padding: 0;
+      color: white; /* Ensures the text is visible on top of the background */
+    }
+
+
+    .animated-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: darkgreen;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .animated-button:hover {
+      background-color: lightgreen;
+    }

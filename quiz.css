@@ -1,0 +1,41 @@
+header {
+  position: fixed; /* Keep the header fixed at the top */
+  top: 0; /* Stick it to the top */
+  left: 0;
+  width: 100%;
+  background-color: #388e3c;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Make sure the header is on top of other content */
+  transition: background-color 0.3s ease;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1.3rem;
+  font-weight: lighter;
+  margin-top: 5px;
+}
+.animated-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: darkgreen;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.animated-button:hover {
+  background-color: lightgreen;
+}

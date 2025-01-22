@@ -1,0 +1,469 @@
+/* General page styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: radial-gradient(circle, rgba(234, 246, 250, 1) 0%, rgba(212, 238, 242, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    animation: fadeIn 1.5s ease-out;
+    /* Page fade-in effect */
+}
+
+/* Page fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header Styling with enhanced animation */
+h1 {
+    background-color: darkgreen;
+    color: white;
+    padding: 30px 50px;
+    margin: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1s ease-out, glowingText 2s infinite alternate, bounceInHeader 1s ease-out;
+    /* Multiple animations */
+}
+
+/* Slide-in from top for header */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Header glowing effect */
+@keyframes glowingText {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px #4CAF50, 0 0 30px #4CAF50;
+    }
+
+    50% {
+        text-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 0 25px #4CAF50, 0 0 40px #4CAF50;
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px #4CAF50, 0 0 30px #4CAF50;
+    }
+}
+
+/* Header bounce effect */
+@keyframes bounceInHeader {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+h1:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 60px rgba(0, 0, 0, 0.2);
+    background-color: lightgreen;
+}
+
+/* Map container with enhanced animation */
+#map {
+    height: 400px;
+    width: 75%;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease;
+    border: 5px solid #ffffff;
+    animation: mapFadeIn 1.2s ease-out, mapGlowEffect 3s infinite alternate;
+    /* Multiple animations */
+}
+
+/* Fade-in for map */
+@keyframes mapFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Map glow effect */
+@keyframes mapGlowEffect {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 40px #4CAF50, 0 0 60px #4CAF50;
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3), 0 0 50px #4CAF50, 0 0 70px #4CAF50;
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 40px #4CAF50, 0 0 60px #4CAF50;
+    }
+}
+
+#map:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Popup Image Styling */
+.popup-content img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, filter 0.3s ease, transform 0.5s ease;
+    border: 4px solid #ffffff;
+    animation: imageFadeIn 1s ease-out, imageGlowEffect 5s infinite alternate, imageTiltEffect 2s infinite alternate, imageFloat 4s ease-in-out infinite;
+    /* Added float animation */
+}
+
+/* Fade-in and slide-up effect for popup images */
+@keyframes imageFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image glow effect */
+@keyframes imageGlowEffect {
+    0% {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 20px #4CAF50, 0 0 30px #4CAF50;
+        border-color: #4CAF50;
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2), 0 0 40px #4CAF50, 0 0 50px #4CAF50;
+        border-color: #45a049;
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 20px #4CAF50, 0 0 30px #4CAF50;
+        border-color: #4CAF50;
+    }
+}
+
+/* Image Tilt Effect (3D Tilt) */
+@keyframes imageTiltEffect {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+
+    50% {
+        transform: rotateY(10deg) rotateX(10deg);
+    }
+
+    100% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+}
+
+/* Float animation (pulse effect) */
+@keyframes imageFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect for popup images (glowing and scaling) */
+.popup-content img:hover {
+    transform: scale(1.2) rotateY(10deg) rotateX(10deg);
+    /* 3D tilt + zoom */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    border-color: #4CAF50;
+    filter: brightness(1.1) blur(0px);
+    /* Make image more bright and less blurry */
+}
+
+/* Enhanced Button with wave effect and bounce */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out, waveEffect 2s infinite alternate;
+    /* Wave and fade-in effect */
+}
+
+/* Button wave effect */
+@keyframes waveEffect {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button styling */
+.close-btn {
+    background-color: transparent;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out, closeBtnGlow 3s infinite alternate;
+}
+
+/* Close button glow effect */
+@keyframes closeBtnGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 15px #4CAF50;
+        border-color: #4CAF50;
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 30px #4CAF50;
+        border-color: #45a049;
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 15px #4CAF50;
+        border-color: #4CAF50;
+    }
+}
+
+/* Close button hover effect */
+.close-btn:hover {
+    background-color: #4CAF50;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        padding: 25px 40px;
+    }
+
+    #map {
+        height: 65vh;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+        padding: 20px 30px;
+    }
+
+    .popup-content img {
+        width: 100px;
+        height: 100px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    #map {
+        height: 50vh;
+    }
+
+    .close-btn {
+        top: 5px;
+        right: 5px;
+    }
+}
+
+.popup-content {
+    font-size: 15px;
+}
+/* Styling the link */
+.more-info-link {
+    color: #007bff; /* Set link color to a nice blue */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+    font-size: 16px; /* Adjust font size */
+    padding: 8px 16px; /* Add padding for a button-like feel */
+    border-radius: 5px; /* Round the corners for a smoother look */
+    background-color: #f0f8ff; /* Light background for a fresh look */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+.more-info-link:hover {
+    color: white; /* Change text color to white */
+    background-color: #0056b3; /* Darken background on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Focus effect for accessibility */
+.more-info-link:focus {
+    outline: 2px solid #0056b3; /* Add outline for keyboard navigability */
+    background-color: #e0e7ff; /* Lighter background when focused */
+}
+/* Basic button style */
+.animated-button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    border: 2px solid #3498db;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Hover effect */
+.animated-button:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Focus effect */
+.animated-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5);
+}
+
+/* General button styling */
+.animated-button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: black; /* Soft blue */
+    color: #fff;
+    border: 2px solid transparent; 
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Hover effect */
+.animated-button:hover {
+    background-color: lightgreen; /* Darker blue */
+    color: #fff;
+    border-color: darkgreen; /* Add border color on hover */
+}
+
+/* Focus effect (for accessibility) */
+.animated-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(92, 107, 192, 0.3); /* Soft shadow */
+}
+
+/* Smooth hover underline effect */
+.animated-button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+
+/* On hover, the underline expands */
+.animated-button:hover::after {
+    width: 100%;
+}
+
+/* Optional fade-in effect for the button */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-button {
+    animation: fadeIn 0.6s ease-out;
+}
